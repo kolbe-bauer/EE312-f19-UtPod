@@ -2,25 +2,34 @@
 
 #ifndef SONG_H
 #define SONG_H
-#include "UtPod.h"
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 //Song class declaration
 class Song {
 private:
-    char *title;
-    char *artist;
+    string title;
+    string artist;
     int size;
 
 public:
-    Song(char *t,char *a, int s);
-    void setTitle(const char *t);
-    char* getTitle();
-    void setArtist(const char *a);
-    char* getArtist();
+    Song(string t,string a, int s);
+    void setTitle(const string t);
+    string getTitle();
+    void setArtist(const string a);
+    string getArtist();
     void setSize(const int s);
     int getSize();
 
-    //override = < >
+    bool operator >(Song const &rhs);
+    bool operator ==(Song const &rhs);
+    bool operator <(Song const &rhs);
+
+    ~Song();
 };
+
+ostream& operator << (ostream& out,const Song &s);
 
 #endif

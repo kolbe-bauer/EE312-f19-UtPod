@@ -1,0 +1,21 @@
+"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\kolbe\Documents\GitHub\EE312-f19-UtPod
+CMake Error: Could not find cmake module file: CMakeDetermineC++Compiler.cmake
+CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
+Missing variable is:
+CMAKE_C++_COMPILER_ENV_VAR
+CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
+Missing variable is:
+CMAKE_C++_COMPILER
+CMake Error: Could not find cmake module file: C:/Users/kolbe/Documents/GitHub/EE312-f19-UtPod/cmake-build-debug/CMakeFiles/3.14.5/CMakeC++Compiler.cmake
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_C++_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting the CMake cache entry
+  CMAKE_C++_COMPILER to the full path to the compiler, or to the compiler
+  name if it is in the PATH.
+
+
+CMake Error: Could not find cmake module file: CMakeC++Information.cmake
+CMake Error: CMAKE_C++_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/kolbe/Documents/GitHub/EE312-f19-UtPod/cmake-build-debug/CMakeFiles/CMakeOutput.log".

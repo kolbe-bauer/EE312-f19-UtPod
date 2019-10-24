@@ -3,6 +3,9 @@
 #ifndef UTPOD_H
 #define UTPOD_H
 #include "Song.h"
+#include <string>
+
+using namespace std;
 
 //UtPod class declaration
 class UtPod
@@ -22,6 +25,8 @@ private:
     SongNode *songs;  //the head pointer
 
     int memSize;
+    int memUsed;
+    int numSongs;
 
 public:
     //Default constructor
