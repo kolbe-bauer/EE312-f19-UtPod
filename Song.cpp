@@ -27,7 +27,7 @@ bool Song::operator>(Song const &rhs) {
             return size>rhs.size;
         return artist>rhs.artist;
     }
-    return title>rhs.title
+    return title>rhs.title;
 }
 bool Song::operator<(Song const &rhs) {
     if(title==rhs.title){
@@ -35,7 +35,7 @@ bool Song::operator<(Song const &rhs) {
             return size<rhs.size;
         return artist<rhs.artist;
     }
-    return title<rhs.title
+    return title<rhs.title;
 }
 
 Song::~Song() {

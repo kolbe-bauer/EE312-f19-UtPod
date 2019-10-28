@@ -6,7 +6,7 @@
 
 using namespace std;
 
-UtPod::UtPod() {}
+UtPod::UtPod() {this(MAX_MEMORY);}
 UtPod::UtPod(int size) {}
 int UtPod::removeSong(Song const &s) { }
 int UtPod::addSong(Song const &s) { }

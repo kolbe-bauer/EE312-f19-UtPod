@@ -26,7 +26,8 @@ int main(){
     Song kolbe("Kolbe","dm48254",69);
     bool test=dhiraj==kolbe;
     cout << "are Kolbe and Dhiraj the same? " << test << endl;
-
+    test=dhiraj<kolbe;
+    cout << "is dhiraj greater than kolbe? " << test << endl;
 
     return 0;
 }
