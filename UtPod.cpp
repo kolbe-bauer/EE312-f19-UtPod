@@ -92,10 +92,45 @@ void UtPod::showSongList() {
     }
 }
 void UtPod::shuffle() {
-
+    for(int i =0; i< numSongs()*2;i++)
+    {
+        int index1= rand()%numSongs();
+        int index2= rand()%numSongs();
+        SongNode* cur1=songs;
+        SongNode* cur2=songs;
+        for(int x=0;x<index1;x++)
+        {
+            cur1=cur1->next;
+        }
+         for(int x=0;x<index2;x++)
+        {
+            cur2=cur2->next;
+        }
+        Song temp=cur1->s;
+        cur1->s=cur2->s;
+        cur2->s=temp;
+    }
 }
 void UtPod::sortSongList() {
-
+    if(songs==NULL)
+        return;
+    bool swapped=false;
+    SongNode* cur=songs;
+    SongNode* last=NULL;
+    do{
+        swapped=false;
+        cur=songs;
+        while(cur->next != last)
+        {
+            if(cur->s > cur->next->s)
+            {
+                swapSongs(cur, cur->next);
+                swapped=true;
+            }
+            cur=cur->next;
+        }
+        last=cur;
+    }while(swapped==true);
 }
 void UtPod::swapSongs(UtPod::SongNode *node1, UtPod::SongNode *node2) {
     Song temp=node1->s;
@@ -114,4 +149,3 @@ int UtPod::numSongs() {
 UtPod::~UtPod() {
     cout << "debug - in destructor for UtPod" << endl;
 }
-
