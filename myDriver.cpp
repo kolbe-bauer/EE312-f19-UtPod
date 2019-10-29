@@ -13,7 +13,9 @@ using namespace std;
 
 int main(){
     cout << "Hello World!" << endl;
-
+    Song ritvik("Yerrudu", "ry3432", 4);
+    Song varun("Hari", "VH22323", 200);
+    Song jason("Jose", "JJ3432", 1);
     Song dhiraj("Manukonda","dm48254",420);
     //string const s=dhiraj.getArtist();
     //cout << "Dhiraj title: " << dhiraj.getTitle() << endl;
@@ -48,7 +50,14 @@ int main(){
 
     mayank.addSong(dhiraj);
     mayank.addSong(kolbe);
+    mayank.addSong(ritvik);
+    mayank.addSong(varun);
+    mayank.addSong(jason);
     cout << "ben memory: " << mayank.getRemainingMemory() << endl;
+    mayank.showSongList();
+    mayank.sortSongList();
+    mayank.showSongList();
+    mayank.shuffle();
     mayank.showSongList();
     //mayank.removeSong(dhiraj);
     //mayank.showSongList();
