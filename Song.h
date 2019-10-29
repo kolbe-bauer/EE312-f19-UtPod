@@ -15,13 +15,14 @@ private:
     int size;
 
 public:
+    Song();
     Song(string t,string a, int s);
     void setTitle(const string t);
-    string getTitle();
+    string getTitle() const;
     void setArtist(const string a);
-    string getArtist();
+    string getArtist() const;
     void setSize(const int s);
-    int getSize();
+    int getSize() const;
 
     bool operator >(Song const &rhs);
     bool operator ==(Song const &rhs);
@@ -30,6 +31,6 @@ public:
     ~Song();
 };
 
-ostream& operator << (ostream& out,const Song &s);
+ostream& operator << (ostream& out, const Song &s);
 
 #endif

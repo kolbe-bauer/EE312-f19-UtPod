@@ -4,6 +4,7 @@
 #define UTPOD_H
 #include "Song.h"
 #include <string>
+#include <ctime>
 
 using namespace std;
 
@@ -24,9 +25,11 @@ private:
 
     SongNode *songs;  //the head pointer
 
+    void swapSongs(SongNode* node1,SongNode* node2);
+    int memUsed();
+    int numSongs();
+
     int memSize;
-    int memUsed;
-    int numSongs;
 
 public:
     //Default constructor

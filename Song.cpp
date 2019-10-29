@@ -6,14 +6,19 @@
 
 using namespace std;
 
+Song::Song(){
+    title="";
+    artist="";
+    size=0;
+}
 Song::Song(string t, string a, int s) {
     title=t;
     artist=a;
     size=s;
 }
-int Song::getSize() { return size;}
-string Song::getArtist() { return artist;}
-string Song::getTitle() { return title;}
+int Song::getSize() const { return size;}
+string Song::getArtist() const { return artist;}
+string Song::getTitle() const { return title;}
 void Song::setArtist(const string a) {artist=a;}
 void Song::setSize(const int s) {size=s;}
 void Song::setTitle(const string t) {title=t;}
@@ -38,6 +43,13 @@ bool Song::operator<(Song const &rhs) {
     return title<rhs.title;
 }
 
+ostream& operator << (ostream& out, const Song &s)
+{
+    out << "Song Title: " << s.getTitle() << "; ";
+    out << "Song Artist: " << s.getArtist() << "; ";
+    out << "Song Size: " << s.getSize() ;
+    return out;
+}
 Song::~Song() {
-    cout << "debug - in destructor for " << title << endl;
+    //cout << "debug - in destructor for " << title << endl;
 }
