@@ -27,16 +27,16 @@ bool Song::operator==(Song const &rhs) {
     return title==rhs.title && artist==rhs.artist && size==rhs.size;
 }
 bool Song::operator>(Song const &rhs) {
-    if(title==rhs.title){
-        if(artist==rhs.artist)
+    if(artist==rhs.artist){
+        if(title==rhs.title)
             return size>rhs.size;
         return artist>rhs.artist;
     }
     return title>rhs.title;
 }
 bool Song::operator<(Song const &rhs) {
-    if(title==rhs.title){
-        if(artist==rhs.artist)
+    if(artist==rhs.artist){
+        if(title==rhs.title)
             return size<rhs.size;
         return artist<rhs.artist;
     }
