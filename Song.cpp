@@ -11,7 +11,7 @@ Song::Song(){
     artist="";
     size=0;
 }
-Song::Song(string t, string a, int s) {
+Song::Song(string a, string t, int s) {
     title=t;
     artist=a;
     size=s;
