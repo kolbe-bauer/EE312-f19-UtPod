@@ -30,17 +30,17 @@ bool Song::operator>(Song const &rhs) {
     if(artist==rhs.artist){
         if(title==rhs.title)
             return size>rhs.size;
-        return artist>rhs.artist;
+        return title>rhs.title;
     }
-    return title>rhs.title;
+    return artist>rhs.artist;
 }
 bool Song::operator<(Song const &rhs) {
     if(artist==rhs.artist){
         if(title==rhs.title)
             return size<rhs.size;
-        return artist<rhs.artist;
+        return title<rhs.title;
     }
-    return title<rhs.title;
+    return artist<rhs.artist;
 }
 
 ostream& operator << (ostream& out, const Song &s)

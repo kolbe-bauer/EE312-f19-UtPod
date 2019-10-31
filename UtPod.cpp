@@ -27,7 +27,7 @@ UtPod::UtPod(int size) {
 int UtPod::removeSong(Song const &s) {
     if(songs->s==s){
         songs=songs->next;
-        return 0;
+        return SUCCESS;
     }
     SongNode *prev=songs;
     SongNode *current=songs->next;
@@ -35,16 +35,16 @@ int UtPod::removeSong(Song const &s) {
         Song search=current->s;
         if(search==s){
             prev->next=current->next;
-            return 0;
+            return SUCCESS;
         }
         prev=current;
         current=current->next;
     }
-    return -1;
+    return NOT_FOUND;
 }
 int UtPod::addSong(Song const &s) {
     if(getRemainingMemory()-s.getSize()<0){
-        return -1;
+        return NO_MEMORY;
     }
     SongNode* node = new struct SongNode;
     //cout << "starting node size" << node->s.getSize() << endl;
@@ -57,7 +57,7 @@ int UtPod::addSong(Song const &s) {
     //cout << "new next node " << node->next << endl;
     songs=node;
     //cout << "new song ptr " << songs << endl;
-    return 0;
+    return SUCCESS;
 }
 void UtPod::clearMemory() {
     SongNode* ptr=songs;
